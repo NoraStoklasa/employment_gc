@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Word lock files
+~$*.doc*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# dbt
+dbt/*/target/
+dbt/*/dbt_packages/
+dbt/*/logs/
+
+# Generated pipeline output (data/raw/ is committed, processed output is not)
+data/processed/
+
+# Secrets / environment
+.env
+*.pem
+
+# IDE
+.vscode/
+.idea/
+
+# Personal/local context, not for the public repo
+CLAUDE.md
+notes/

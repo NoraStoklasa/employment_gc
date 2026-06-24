@@ -1,0 +1,18 @@
+# Python dependencies for the Gold Coast Labour Market Pipeline
+
+# Data manipulation
+pandas==2.2.3
+pyarrow==21.0.0
+
+# AWS
+boto3==1.42.89
+
+# Snowflake
+snowflake-connector-python==3.18.0
+
+# dbt
+dbt-core==1.10.20
+dbt-snowflake==1.10.2
+
+# Environment variables (credentials)
+python-dotenv==1.1.0
