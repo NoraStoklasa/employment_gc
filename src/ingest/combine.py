@@ -19,10 +19,6 @@ if __name__ == "__main__":
 
     lga_raw = load_salm("data/raw/SALM Smoothed LGA Datafiles (ASGS 2025) - December quarter 2025.csv")
     lga_filtered = filter_lga_capitals(lga_raw)
-    lga_filtered = lga_filtered.rename(columns={
-        "Local Government Area (LGA) (2025 ASGS)": "Statistical Area Level 2 (SA2) (2021 ASGS)",
-        "LGA Code (2025 ASGS)": "SA2 Code (2021 ASGS)"
-    })
     lga_long = reshape_salm(lga_filtered)
 
     result = combine(sa2_long, lga_long)
