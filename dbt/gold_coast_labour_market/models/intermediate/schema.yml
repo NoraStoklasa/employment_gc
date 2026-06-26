@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: int_combined_salm
+    description: 'Pivoted SALM data — one row per region and quarter, with unemployment metrics as separate columns.''
+    columns:
+      - name: region_name
+        description: 'Suburb or city name'
+      - name: region_code
+        description: 'SA2 or LGA code'
+      - name: quarter_date
+        description: 'Quarter as a date (first day of the quarter month)'
+      - name: level
+        description: 'Either sa2 (suburb) or lga (city-wide)'
+      - name: unemployment_persons
+        description: 'Smoothed unemployment count'
+      - name: labour_force_persons
+        description: 'Smoothed labour force count'
+      - name: unemployment_rate
+        description: 'Smoothed unemployment rate as a percentage'

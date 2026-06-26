@@ -12,3 +12,5 @@ level
 
 
 FROM {{ source('raw', 'combined_salm_data') }}
+WHERE quarter IS NOT NULL
+AND quarter != 'Unnamed: 64'
