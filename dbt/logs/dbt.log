@@ -1,0 +1,28 @@
+[0m13:50:32.178003 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 13:50:32.205755 | a0a6713f-ea69-4731-b7c6-01982e195e3a ==============================
+[0m13:50:32.205755 [info ] [MainThread]: Running with dbt=1.10.20
+[0m13:50:32.206276 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/norastoklasa/.dbt', 'fail_fast': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'introspect': 'True', 'warn_error': 'None', 'static_parser': 'True', 'debug': 'False', 'log_path': 'logs', 'invocation_command': 'dbt init gold_coast_labour_market', 'version_check': 'True', 'use_colors': 'True', 'log_format': 'default', 'target_path': 'None', 'printer_width': '80', 'quiet': 'False', 'empty': 'None', 'write_json': 'True', 'partial_parse': 'True', 'log_cache_events': 'False', 'no_print': 'None'}
+[0m13:50:32.234173 [debug] [MainThread]: Starter project path: /Users/norastoklasa/Library/Python/3.9/lib/python/site-packages/dbt/include/starter_project
+[0m13:50:32.237800 [info ] [MainThread]: 
+Your new dbt project "gold_coast_labour_market" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:50:32.238069 [info ] [MainThread]: Setting up your profile.
+[0m14:01:41.283536 [info ] [MainThread]: Profile gold_coast_labour_market written to /Users/norastoklasa/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m14:01:41.308719 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 669.1611, "process_in_blocks": "0", "process_kernel_time": 0.237774, "process_mem_max_rss": "173867008", "process_out_blocks": "0", "process_user_time": 1.077865}
+[0m14:01:41.309686 [debug] [MainThread]: Command `dbt init` succeeded at 14:01:41.309580 after 669.16 seconds
+[0m14:01:41.310011 [debug] [MainThread]: Flushing usage events

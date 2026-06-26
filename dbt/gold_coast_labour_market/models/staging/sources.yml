@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: GOLD_COAST_LABOUR_MARKET
+    schema: RAW
+    tables:
+      - name: combined_salm_data
+        description: 'Combined SALM data from multiple sources'
