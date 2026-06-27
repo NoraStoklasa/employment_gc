@@ -30,8 +30,11 @@ clean-targets: # directories to be removed by `dbt clean`
 models:
   gold_coast_labour_market:
     staging:
+      +schema: STD
       +materialized: view
     intermediate:
+      +schema: EDW
       +materialized: view
     marts:
+      +schema: RPT
       +materialized: table

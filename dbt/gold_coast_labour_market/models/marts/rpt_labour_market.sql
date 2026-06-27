@@ -1,5 +1,3 @@
-{{ config(schema='RPT') }}
-
 SELECT
     CASE WHEN region_name = 'Unincorporated ACT' THEN 'Canberra' ELSE region_name END AS region_name,
     region_code,
