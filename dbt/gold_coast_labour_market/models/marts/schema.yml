@@ -1,17 +1,23 @@
 version: 2
 
 models:
-  - name: int_combined_salm
-    description: 'Pivoted SALM data — one row per region and quarter, with unemployment metrics as separate columns.'
+  - name: rpt_labour_market
+    description: 'Final reporting table for Power BI. One row per region and quarter, with all metrics as columns, period label, year, and Gold Coast SA2 flag.'
     columns:
       - name: region_name
-        description: 'Suburb or city name'
+        description: 'Suburb or city name. Unincorporated ACT renamed to Canberra.'
       - name: region_code
         description: 'SA2 or LGA code'
       - name: quarter_date
         description: 'Quarter as a date (first day of the quarter month)'
+      - name: period
+        description: 'Quarter as a readable label e.g. Dec 2010'
+      - name: year
+        description: 'Year extracted from quarter_date'
       - name: level
         description: 'Either sa2 (suburb) or lga (city-wide)'
+      - name: is_gold_coast_sa2
+        description: 'True if the row is a Gold Coast suburb, False if city-wide benchmark'
       - name: unemployment_persons
         description: 'Smoothed unemployment count'
       - name: labour_force_persons
