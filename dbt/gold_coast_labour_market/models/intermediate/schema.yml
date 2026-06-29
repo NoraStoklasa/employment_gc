@@ -6,15 +6,42 @@ models:
     columns:
       - name: region_name
         description: 'Suburb or city name'
+        tests:
+          - not_null
       - name: region_code
         description: 'SA2 or LGA code'
+        tests:
+          - not_null
       - name: quarter_date
         description: 'Quarter as a date (first day of the quarter month)'
+        tests:
+          - not_null
       - name: level
         description: 'Either sa2 (suburb) or lga (city-wide)'
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['sa2', 'lga']
       - name: unemployment_persons
         description: 'Smoothed unemployment count'
       - name: labour_force_persons
         description: 'Smoothed labour force count'
       - name: unemployment_rate
         description: 'Smoothed unemployment rate as a percentage'
+      - name: unemployment_rank
+        description: 'Rank by unemployment rate within each quarter and level (1 = highest)'
+        tests:
+          - not_null
+      # no not_null test: null for Dec 2010, the first year, since there's no prior year to compare to
+      - name: unemployment_rate_prev_year
+        description: 'Unemployment rate from the same quarter one year ago'
+      - name: yoy_change
+        description: 'Change in unemployment rate vs same quarter last year (positive = got worse)'
+
+      - name: avg_unemployment_rate
+        description: 'Average unemployment rate across all regions in the same quarter and level'
+        tests:
+          - not_null
+      - name: diff_from_avg
+        description: 'How far above or below the average this region is (positive = worse than average)'

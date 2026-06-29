@@ -6,13 +6,34 @@ models:
     columns:
       - name: metric
         description: 'Metric type: unemployment_persons, labour_force_persons, or unemployment_rate'
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  [
+                    'unemployment_persons',
+                    'labour_force_persons',
+                    'unemployment_rate',
+                  ]
       - name: region_name
         description: 'Suburb or city name'
+        tests:
+          - not_null
       - name: region_code
         description: 'SA2 or LGA code'
+        tests:
+          - not_null
       - name: quarter_date
         description: 'Quarter as a date (first day of the quarter month)'
+        tests:
+          - not_null
       - name: value
         description: 'Numeric value for the metric'
       - name: level
         description: 'Either sa2 (suburb) or lga (city-wide)'
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['sa2', 'lga']
