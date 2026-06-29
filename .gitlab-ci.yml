@@ -7,24 +7,19 @@ dbt-test:
   script:
     - pip install dbt-snowflake
     - mkdir -p /root/.dbt
-    - |
-      cat > /root/.dbt/profiles.yml << EOF
-      gold_coast_labour_market:
-        outputs:
-          dev:
-            type: snowflake
-            account: "${SNOWFLAKE_ACCOUNT}"
-            user: NORATECH
-            password: "${SNOWFLAKE_PASSWORD}"
-            role: ACCOUNTADMIN
-            database: GOLD_COAST_LABOUR_MARKET
-            warehouse: COMPUTE_WH
-            schema: RAW
-            threads: 1
-        target: dev
-      EOF
+    - echo "gold_coast_labour_market:" > /root/.dbt/profiles.yml
+    - echo "  outputs:" >> /root/.dbt/profiles.yml
+    - echo "    dev:" >> /root/.dbt/profiles.yml
+    - echo "      type: snowflake" >> /root/.dbt/profiles.yml
+    - echo "      account: $SNOWFLAKE_ACCOUNT" >> /root/.dbt/profiles.yml
+    - echo "      user: NORATECH" >> /root/.dbt/profiles.yml
+    - echo "      password: $SNOWFLAKE_PASSWORD" >> /root/.dbt/profiles.yml
+    - echo "      role: ACCOUNTADMIN" >> /root/.dbt/profiles.yml
+    - echo "      database: GOLD_COAST_LABOUR_MARKET" >> /root/.dbt/profiles.yml
+    - echo "      warehouse: COMPUTE_WH" >> /root/.dbt/profiles.yml
+    - echo "      schema: RAW" >> /root/.dbt/profiles.yml
+    - echo "      threads: 1" >> /root/.dbt/profiles.yml
+    - echo "  target: dev" >> /root/.dbt/profiles.yml
+    - echo "Account is $SNOWFLAKE_ACCOUNT"
     - cd dbt/gold_coast_labour_market
     - dbt test
-  variables:
-    SNOWFLAKE_ACCOUNT: $SNOWFLAKE_ACCOUNT
-    SNOWFLAKE_PASSWORD: $SNOWFLAKE_PASSWORD
