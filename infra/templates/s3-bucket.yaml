@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'S3 bucket for Gold Coast Labour Market Pipeline raw data storage'
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: 'Name of the S3 bucket'
+
+Resources:
+  GoldCoastLabourMarketBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  BucketName:
+    Description: 'Name of the S3 bucket'
+    Value: !Ref GoldCoastLabourMarketBucket
