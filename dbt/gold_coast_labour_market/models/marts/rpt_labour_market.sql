@@ -8,5 +8,10 @@ SELECT
     CASE WHEN level = 'sa2' THEN TRUE ELSE FALSE END AS is_gold_coast_sa2,
     unemployment_persons,
     labour_force_persons,
-    unemployment_rate
+    unemployment_rate,
+    unemployment_rank,
+    unemployment_rate_prev_year,
+    yoy_change,
+    avg_unemployment_rate,
+    diff_from_avg
 FROM {{ ref('int_combined_salm') }}
