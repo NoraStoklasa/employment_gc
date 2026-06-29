@@ -1,0 +1,80 @@
+[0m15:04:15.707960 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:04:15.720929 | 9d01b479-08a1-4ca6-8877-ea7d9c66ac28 ==============================
+[0m15:04:15.720929 [info ] [MainThread]: Running with dbt=1.10.20
+[0m15:04:15.721450 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'warn_error': 'None', 'empty': 'None', 'printer_width': '80', 'write_json': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'profiles_dir': '/Users/norastoklasa/.dbt', 'indirect_selection': 'eager', 'version_check': 'True', 'log_format': 'default', 'use_experimental_parser': 'False', 'use_colors': 'True', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt debug', 'log_path': 'logs', 'fail_fast': 'False', 'partial_parse': 'True'}
+[0m15:04:15.731322 [info ] [MainThread]: dbt version: 1.10.20
+[0m15:04:15.731607 [info ] [MainThread]: python version: 3.9.6
+[0m15:04:15.731804 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m15:04:15.731994 [info ] [MainThread]: os info: macOS-26.4.1-arm64-arm-64bit
+[0m15:04:15.735402 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Env var required but not provided: 'SNOWFLAKE_ACCOUNT'
+[0m15:04:15.737139 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.05795329, "process_in_blocks": "0", "process_kernel_time": 0.145773, "process_mem_max_rss": "103677952", "process_out_blocks": "0", "process_user_time": 0.737876}
+[0m15:04:15.737431 [debug] [MainThread]: Command `dbt debug` failed at 15:04:15.737375 after 0.06 seconds
+[0m15:04:15.737646 [debug] [MainThread]: Flushing usage events
+[0m15:05:30.998393 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:05:31.010408 | de8c8ba0-e571-413b-95b3-0f8f9dfff9e5 ==============================
+[0m15:05:31.010408 [info ] [MainThread]: Running with dbt=1.10.20
+[0m15:05:31.011030 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'static_parser': 'True', 'write_json': 'True', 'version_check': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'log_path': 'logs', 'target_path': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'no_print': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/Users/norastoklasa/.dbt', 'debug': 'False', 'use_colors': 'True'}
+[0m15:05:31.020961 [info ] [MainThread]: dbt version: 1.10.20
+[0m15:05:31.021248 [info ] [MainThread]: python version: 3.9.6
+[0m15:05:31.021435 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m15:05:31.021616 [info ] [MainThread]: os info: macOS-26.4.1-arm64-arm-64bit
+[0m15:05:31.629776 [info ] [MainThread]: Using profiles dir at /Users/norastoklasa/.dbt
+[0m15:05:31.630077 [info ] [MainThread]: Using profiles.yml file at /Users/norastoklasa/.dbt/profiles.yml
+[0m15:05:31.630272 [info ] [MainThread]: Using dbt_project.yml file at /Users/norastoklasa/Desktop/gold-coast-labour-market-pipeline/dbt_project.yml
+[0m15:05:31.630603 [info ] [MainThread]: adapter type: snowflake
+[0m15:05:31.630826 [info ] [MainThread]: adapter version: 1.10.2
+[0m15:05:31.631019 [info ] [MainThread]: Configuration:
+[0m15:05:31.631189 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:05:31.631358 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:05:31.631521 [info ] [MainThread]: Required dependencies:
+[0m15:05:31.631715 [debug] [MainThread]: Executing "git --help"
+[0m15:05:31.647507 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:05:31.647981 [debug] [MainThread]: STDERR: "b''"
+[0m15:05:31.648192 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:05:31.648393 [info ] [MainThread]: Connection:
+[0m15:05:31.648602 [info ] [MainThread]:   account: jhizuod-mi34164
+[0m15:05:31.648781 [info ] [MainThread]:   user: NORATECH
+[0m15:05:31.648953 [info ] [MainThread]:   database: GOLD_COAST_LABOUR_MARKET
+[0m15:05:31.649124 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m15:05:31.649292 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m15:05:31.649458 [info ] [MainThread]:   schema: RAW
+[0m15:05:31.649623 [info ] [MainThread]:   authenticator: None
+[0m15:05:31.649790 [info ] [MainThread]:   oauth_client_id: None
+[0m15:05:31.649957 [info ] [MainThread]:   query_tag: None
+[0m15:05:31.650121 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:05:31.650287 [info ] [MainThread]:   host: None
+[0m15:05:31.650454 [info ] [MainThread]:   port: None
+[0m15:05:31.650618 [info ] [MainThread]:   proxy_host: None
+[0m15:05:31.650783 [info ] [MainThread]:   proxy_port: None
+[0m15:05:31.650948 [info ] [MainThread]:   protocol: None
+[0m15:05:31.651113 [info ] [MainThread]:   connect_retries: 1
+[0m15:05:31.651277 [info ] [MainThread]:   connect_timeout: None
+[0m15:05:31.651444 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:05:31.651610 [info ] [MainThread]:   retry_all: False
+[0m15:05:31.651774 [info ] [MainThread]:   insecure_mode: False
+[0m15:05:31.651939 [info ] [MainThread]:   reuse_connections: True
+[0m15:05:31.652103 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m15:05:31.652522 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m15:05:31.737192 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:05:31.766079 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:05:31.766326 [debug] [MainThread]: On debug: select 1 as id
+[0m15:05:31.766500 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:05:32.956609 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.190 seconds
+[0m15:05:32.959975 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:05:32.960882 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:05:32.961595 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/norastoklasa/Desktop/gold-coast-labour-market-pipeline/dbt_project.yml> not found
+
+[0m15:05:32.970209 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.9987005, "process_in_blocks": "0", "process_kernel_time": 0.308022, "process_mem_max_rss": "215810048", "process_out_blocks": "0", "process_user_time": 1.225392}
+[0m15:05:32.971077 [debug] [MainThread]: Command `dbt debug` failed at 15:05:32.970920 after 2.00 seconds
+[0m15:05:32.971742 [debug] [MainThread]: Connection 'debug' was left open.
+[0m15:05:32.972582 [debug] [MainThread]: On debug: Close
+[0m15:05:33.068869 [debug] [MainThread]: Flushing usage events

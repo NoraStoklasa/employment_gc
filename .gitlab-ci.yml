@@ -1,0 +1,13 @@
+stages:
+  - test
+
+dbt-test:
+  stage: test
+  image: python:3.11
+  script:
+    - pip install dbt-snowflake
+    - cd dbt/gold_coast_labour_market
+    - dbt test
+  variables:
+    SNOWFLAKE_ACCOUNT: $SNOWFLAKE_ACCOUNT
+    SNOWFLAKE_PASSWORD: $SNOWFLAKE_PASSWORD
