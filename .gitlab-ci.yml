@@ -6,6 +6,23 @@ dbt-test:
   image: python:3.11
   script:
     - pip install dbt-snowflake
+    - mkdir -p /root/.dbt
+    - |
+      cat > /root/.dbt/profiles.yml << EOF
+      gold_coast_labour_market:
+        outputs:
+          dev:
+            type: snowflake
+            account: "${SNOWFLAKE_ACCOUNT}"
+            user: NORATECH
+            password: "${SNOWFLAKE_PASSWORD}"
+            role: ACCOUNTADMIN
+            database: GOLD_COAST_LABOUR_MARKET
+            warehouse: COMPUTE_WH
+            schema: RAW
+            threads: 1
+        target: dev
+      EOF
     - cd dbt/gold_coast_labour_market
     - dbt test
   variables:
