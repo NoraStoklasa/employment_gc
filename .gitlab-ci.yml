@@ -20,6 +20,5 @@ dbt-test:
     - 'echo "      schema: RAW" >> /root/.dbt/profiles.yml'
     - 'echo "      threads: 1" >> /root/.dbt/profiles.yml'
     - 'echo "  target: dev" >> /root/.dbt/profiles.yml'
-    - echo "Account is $SNOWFLAKE_ACCOUNT"
     - cd dbt/gold_coast_labour_market
     - dbt test
